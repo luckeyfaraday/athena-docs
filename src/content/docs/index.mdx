@@ -1,0 +1,48 @@
+---
+title: Athena Ecosystem
+description: Documentation for the Athena ecosystem by LuckeySystems — Athena Desktop, Athena Code, Athena Mobile, and Athena Whisper.
+template: splash
+hero:
+  title: The Athena Ecosystem
+  tagline: A local-first command room for AI coding agents — desktop orchestration, a memory-focused coding agent, mobile access, and voice input. All open source.
+  actions:
+    - text: What is Athena?
+      link: /start-here/what-is-athena/
+      icon: right-arrow
+    - text: View on GitHub
+      link: https://github.com/luckeyfaraday
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## The Tools
+
+<CardGrid stagger>
+	<Card title="Athena Desktop" icon="laptop">
+		The heart of the ecosystem. A local desktop command room for orchestrating
+		AI coding agents — embedded terminals, session recall, and project
+		handoffs in one Electron app.
+
+		[Read the docs →](/athena-desktop/overview/)
+	</Card>
+	<Card title="Athena Code" icon="seti:shell">
+		An open-source terminal AI coding agent with persistent local memory,
+		automatic context recall, and searchable cross-session history.
+
+		[Read the docs →](/athena-code/overview/)
+	</Card>
+	<Card title="Athena Mobile" icon="phone">
+		A mobile companion PWA that talks to your Athena workspace over a private
+		Tailscale network, so you can check on your agents from your phone.
+
+		[Read the docs →](/athena-mobile/overview/)
+	</Card>
+	<Card title="Athena Whisper" icon="seti:audio">
+		A local-first AI dictation widget. Speak naturally and have your words
+		typed into terminals, coding agents, and any focused text field.
+
+		[Read the docs →](/athena-whisper/overview/)
+	</Card>
+</CardGrid>
