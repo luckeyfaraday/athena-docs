@@ -3,8 +3,30 @@ title: Athena Ecosystem
 description: Documentation for the Athena ecosystem by LuckeySystems — Athena Desktop, Athena Code, Athena Mobile, and Athena Whisper.
 template: splash
 hero:
-  title: The Athena Ecosystem
-  tagline: A local-first command room for AI coding agents — desktop orchestration, a memory-focused coding agent, mobile access, and voice input. All open source.
+  title: An AI workshop that remembers
+  tagline: Most AI tools wake up with amnesia. Athena is an ecosystem of open-source, local-first tools that keep durable memory of your work. Everything runs on your machine. Nothing phones home.
+  image:
+    html: |
+      <div class="ath-plate not-content">
+        <svg viewBox="0 0 220 220" fill="none" aria-hidden="true">
+          <g stroke="currentColor" stroke-width="28" stroke-linecap="round">
+            <line x1="110" y1="76" x2="110" y2="24"/>
+            <line x1="110" y1="144" x2="110" y2="196"/>
+            <line x1="139.4" y1="93" x2="184.5" y2="67"/>
+            <line x1="139.4" y1="127" x2="184.5" y2="153"/>
+            <line x1="80.6" y1="93" x2="35.5" y2="67"/>
+            <line x1="80.6" y1="127" x2="35.5" y2="153"/>
+          </g>
+        </svg>
+        <hr />
+        <dl>
+          <div><dt>FIG.</dt><dd>002 — THE MANUAL</dd></div>
+          <div><dt>SYSTEM</dt><dd>ATHENA</dd></div>
+          <div><dt>BUILT BY</dt><dd>LUCKEYSYSTEMS</dd></div>
+          <div><dt>LICENSE</dt><dd>MIT</dd></div>
+          <div><dt>CLOUD REQ.</dt><dd class="gold">NONE</dd></div>
+        </dl>
+      </div>
   actions:
     - text: What is Athena?
       link: /start-here/what-is-athena/
@@ -27,19 +49,19 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 		[Read the docs →](/athena-desktop/overview/)
 	</Card>
-	<Card title="Athena Code" icon="seti:shell">
+	<Card title="Athena Code" icon="forward-slash">
 		An open-source terminal AI coding agent with persistent local memory,
 		automatic context recall, and searchable cross-session history.
 
 		[Read the docs →](/athena-code/overview/)
 	</Card>
-	<Card title="Athena Mobile" icon="phone">
+	<Card title="Athena Mobile" icon="mobile-android">
 		A mobile companion PWA that talks to your Athena workspace over a private
 		Tailscale network, so you can check on your agents from your phone.
 
 		[Read the docs →](/athena-mobile/overview/)
 	</Card>
-	<Card title="Athena Whisper" icon="seti:audio">
+	<Card title="Athena Whisper" icon="comment">
 		A local-first AI dictation widget. Speak naturally and have your words
 		typed into terminals, coding agents, and any focused text field.
 

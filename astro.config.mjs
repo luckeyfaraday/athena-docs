@@ -7,9 +7,45 @@ export default defineConfig({
 	site: 'https://docs.luckeysystems.com',
 	integrations: [
 		starlight({
-			title: 'Athena Docs',
+			title: 'Athena',
 			description:
 				'Documentation for the Athena ecosystem by LuckeySystems: Athena Desktop, Athena Code, Athena Mobile, and Athena Whisper.',
+			logo: {
+				light: './src/assets/athena-mark-ink.svg',
+				dark: './src/assets/athena-mark-cream.svg',
+				alt: 'Athena mark',
+			},
+			favicon: '/favicon.png',
+			customCss: ['./src/styles/custom.css'],
+			head: [
+				{
+					tag: 'link',
+					attrs: { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+				},
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'preconnect',
+						href: 'https://fonts.gstatic.com',
+						crossorigin: true,
+					},
+				},
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'stylesheet',
+						href: 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Silkscreen:wght@400;700&display=swap',
+					},
+				},
+			],
+			expressiveCode: {
+				styleOverrides: {
+					borderRadius: '0',
+					borderWidth: '1.5px',
+					uiFontFamily: "'Silkscreen', monospace",
+					codeFontFamily: "'IBM Plex Mono', ui-monospace, monospace",
+				},
+			},
 			social: [
 				{
 					icon: 'github',
