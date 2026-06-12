@@ -271,7 +271,10 @@ main h1#_top::after {
 	border: 1px solid var(--sl-color-hairline-light);
 	border-radius: 0;
 	font-size: 0.82em;
-	padding: 0.1em 0.4em;
+	padding: 0.08em 0.3em;
+	/* when a long path wraps, give each fragment a complete chip */
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
 }
 
 /* ---------- code blocks: install-row treatment ---------- */

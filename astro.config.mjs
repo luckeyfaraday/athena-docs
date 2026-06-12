@@ -39,6 +39,10 @@ export default defineConfig({
 				},
 			],
 			expressiveCode: {
+				defaultProps: {
+					wrap: true,
+					frame: 'none',
+				},
 				styleOverrides: {
 					borderRadius: '0',
 					borderWidth: '1.5px',

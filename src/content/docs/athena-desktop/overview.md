@@ -8,7 +8,7 @@ description: A local desktop command room for AI coding agents, session recall, 
 In short: an **AI coding agent workspace**, **multi-agent desktop app**, **embedded terminal control room**, **Hermes MCP bridge**, and **session recall manager** for local software development.
 
 :::note[Repository]
-[github.com/luckeyfaraday/Athena](https://github.com/luckeyfaraday/Athena) — Linux, Windows, and WSL.
+[github.com/luckeyfaraday/Athena](https://github.com/luckeyfaraday/Athena) — Linux, Windows, and macOS.
 :::
 
 ## Quick facts

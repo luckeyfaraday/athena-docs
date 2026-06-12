@@ -12,7 +12,7 @@ Hermes is the long-term memory agent in the Athena stack. The integration runs i
 
 "Connecting Hermes" is two independent steps. The **Settings → Hermes** card in the desktop app shows the current state of both and provides actions where it can.
 
-1. **Install the Hermes Agent CLI.** On Linux/WSL with `bash` and `curl`, the Hermes card shows an **Install Hermes** button wired to `POST /hermes/install`. On native Windows, install the native Hermes build separately and make sure `hermes` is on your `PATH`. Athena detects Hermes through `shutil.which("hermes")` plus `~/.hermes`.
+1. **Install the Hermes Agent CLI.** On Linux and macOS with `bash` and `curl`, the Hermes card shows an **Install Hermes** button wired to `POST /hermes/install`. On native Windows, install the native Hermes build separately and make sure `hermes` is on your `PATH`. Athena detects Hermes through `shutil.which("hermes")` plus `~/.hermes`.
 
 2. **Point Hermes at the Athena MCP bridge.** Add the bridge block to your Hermes config (`~/.hermes/config.yaml`). The Hermes card has a **Connect Hermes to Athena** helper with a copyable snippet; full details below.
 
@@ -35,12 +35,12 @@ Both paths reach the local Athena backend, which runs Hermes once with the proje
 
 ## The MCP bridge
 
-Athena includes an MCP server under `mcp_server/` so Hermes can call into the running desktop workspace. This bridge is designed for Hermes running in WSL while Athena runs on Windows, but the same concepts apply to local desktop usage.
+Athena includes an MCP server under `mcp_server/` so Hermes can call into the running desktop workspace.
 
 Install the MCP server dependencies into the Python environment Hermes will use:
 
 ```bash
-pip install -r /mnt/c/Users/you/context-workspace/mcp_server/requirements.txt
+pip install -r ~/context-workspace/mcp_server/requirements.txt
 ```
 
 Add the bridge to the Hermes config at `~/.hermes/config.yaml`:
@@ -50,18 +50,18 @@ mcp_servers:
   context_workspace:
     command: "python"
     args:
-      - "/mnt/c/Users/you/context-workspace/mcp_server/server.py"
+      - "/home/you/context-workspace/mcp_server/server.py"
     timeout: 120
     connect_timeout: 30
     env:
-      CONTEXT_WORKSPACE_BACKEND_STATE: "/mnt/c/Users/you/.context-workspace/backend.json"
+      CONTEXT_WORKSPACE_BACKEND_STATE: "/home/you/.context-workspace/backend.json"
 ```
 
 If Hermes uses its own virtual environment, set `command` to that interpreter.
 
 ### Backend discovery
 
-The Electron app writes backend discovery state to `~/.context-workspace/backend.json` (on Windows: `C:\Users\you\.context-workspace\backend.json`, visible from WSL at `/mnt/c/Users/you/.context-workspace/backend.json`).
+The Electron app writes backend discovery state to `~/.context-workspace/backend.json` (on Windows: `C:\Users\you\.context-workspace\backend.json`).
 
 Start the Athena desktop app before starting Hermes so the backend state file exists. If you run the backend directly on a fixed port, use `CONTEXT_WORKSPACE_BACKEND_URL` instead:
 
