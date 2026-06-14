@@ -15,7 +15,7 @@ Athena turns those separate agent sessions into **one local command room with sh
 
 ## Local-first by design
 
-Everything in the Athena ecosystem runs on your machine. Memory, recall caches, session indexes, and even speech-to-text stay in local files by default. Your model requests go to whichever AI provider you configure — but the orchestration layer, the memory layer, and the history layer are yours.
+The Athena ecosystem runs on your machine by default. Memory, recall caches, session indexes, and even speech-to-text stay in local files. Your model requests go to whichever AI provider you configure — but the orchestration layer, the memory layer, and the history layer are yours.
 
 ## The four tools
 

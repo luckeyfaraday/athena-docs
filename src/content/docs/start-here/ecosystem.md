@@ -48,7 +48,7 @@ Hermes is the long-term memory agent in the stack. Athena Desktop integrates wit
 
 ## Repositories
 
-All projects are open source under [github.com/luckeyfaraday](https://github.com/luckeyfaraday):
+All projects live in public repositories under [github.com/luckeyfaraday](https://github.com/luckeyfaraday) (Athena Code is MIT licensed; the others are source-available):
 
 | Project | Repository |
 |---|---|
